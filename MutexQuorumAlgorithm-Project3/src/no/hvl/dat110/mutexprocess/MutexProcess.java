@@ -6,6 +6,7 @@ import no.hvl.dat110.util.Util;
 import java.io.File;
 import java.io.IOException;
 import java.rmi.AccessException;
+import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
@@ -76,11 +77,9 @@ public class MutexProcess extends UnicastRemoteObject implements ProcessInterfac
     public void acquireLock() throws RemoteException {
         // logical clock update and set CS variable
         incrementclock();
-        while (WANTS_TO_ENTER_CS) {
-            if (!CS_BUSY) {
-                CS_BUSY = true;
-                WANTS_TO_ENTER_CS = false;
-            }
+        if (!CS_BUSY) {
+            CS_BUSY = true;
+            WANTS_TO_ENTER_CS = false;
         }
     }
 
@@ -101,7 +100,7 @@ public class MutexProcess extends UnicastRemoteObject implements ProcessInterfac
         WANTS_TO_ENTER_CS = true;
 
         // multicast read request to start the voting to N/2 + 1 replicas (majority) - optimal. You could as well send to all the replicas that have the file
-        return multicastMessage(message,quorum);
+        return multicastMessage(message, quorum);
 
     }
 
@@ -115,7 +114,7 @@ public class MutexProcess extends UnicastRemoteObject implements ProcessInterfac
 
         // multicast read request to start the voting to N/2 + 1 replicas (majority) - optimal. You could as well send to all the replicas that have the file
 
-        return multicastMessage(message,quorum);
+        return multicastMessage(message, quorum);
     }
 
     // multicast message to N/2 + 1 processes (random processes)
@@ -125,43 +124,75 @@ public class MutexProcess extends UnicastRemoteObject implements ProcessInterfac
 
 
         // randomize - shuffle list each time - to get random processes each time
-
+        Collections.shuffle(replicas);
 
         // multicast message to N/2 + 1 processes (random processes) - block until feedback is received
+        for (int i = 0; i < n; i++) {
+            String rep = replicas.get(i);
+            try {
+                ProcessInterface p = Util.registryHandle(rep);
+                Message m = null;
+                m = p.onMessageReceived(message);
+                while (m == null) {
+                    Thread.currentThread().wait();
+                }
+                synchronized (queueACK) {
+                    queueACK.add(m);
+                }
+            } catch (NotBoundException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
 
         // do something with the acknowledgement you received from the voters - Idea: use the queueACK to collect GRANT/DENY messages and make sure queueACK is synchronized!!!
+        //Fixed in the above statement
 
         // compute election result - Idea call majorityAcknowledged()
-
-
-        return false;  // change to the election result
-
+        return majorityAcknowledged();
     }
 
     @Override
     public Message onMessageReceived(Message message) throws RemoteException {
 
         // increment the local clock
+        incrementclock();
 
         // Hint: for all 3 cases, use Message to send GRANT or DENY. e.g. message.setAcknowledgement(true) = GRANT
+
 
         /**
          *  case 1: Receiver is not accessing shared resource and does not want to: GRANT, acquirelock and reply
          */
-
+        if (!WANTS_TO_ENTER_CS && !CS_BUSY) {
+            acquireLock();
+            message.setAcknowledged(true);
+            return message;
+        }
 
         /**
          *  case 2: Receiver already has access to the resource: DENY and reply
          */
-
+        if (CS_BUSY) {
+            message.setAcknowledged(false);
+            return message;
+        }
 
         /**
          *  case 3: Receiver wants to access resource but is yet to (compare own multicast message to received message
          *  the message with lower timestamp wins) - GRANT if received is lower, acquirelock and reply
          */
+        if (WANTS_TO_ENTER_CS) {
+            int recClock = message.getClock();
+            if (recClock < counter) {
+                acquireLock();
+                message.setAcknowledged(true);
+                return message;
+            }
+        }
 
-
-        return null;
+       return null;
     }
 
     public boolean majorityAcknowledged() throws RemoteException {
@@ -169,9 +200,9 @@ public class MutexProcess extends UnicastRemoteObject implements ProcessInterfac
         // count the number of yes (i.e. where message.isAcknowledged = true)
         // check if it is the majority or not
         // return the decision (true or false)
-
-
-        return false;            // change this to the result of the vote
+        long pro = queueACK.stream().filter(a -> a.isAcknowledged()).count();
+        long against = queueACK.size() - pro;
+        return pro > against;
     }
 
 
@@ -179,6 +210,9 @@ public class MutexProcess extends UnicastRemoteObject implements ProcessInterfac
     public void onReceivedVotersDecision(Message message) throws RemoteException {
 
         // release CS lock if voter initiator says he was denied access bcos he lacks majority votes
+        if(!majorityAcknowledged()) {
+            releaseLocks();
+        }
 
         // otherwise lock is kept
 
@@ -190,6 +224,12 @@ public class MutexProcess extends UnicastRemoteObject implements ProcessInterfac
         // check the operation type: we expect a WRITE operation to do this.
         // perform operation by using the Operations class
         // Release locks after this operation
+        if(message.getOptype() == OperationType.WRITE) {
+            Operations op = new Operations(this,message);
+            op.write(localfile);
+        }
+
+
 
     }
 
