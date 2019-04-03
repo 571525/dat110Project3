@@ -46,7 +46,7 @@ public class MutexProcess extends UnicastRemoteObject implements ProcessInterfac
         N = replicas.size();
         quorum = N / 2 + 1;
 
-        createFile();                                        // create a local file - this is our shared resource (item)
+        createFile();// create a local file - this is our shared resource (item)
     }
 
     private void createFile() {
@@ -60,7 +60,6 @@ public class MutexProcess extends UnicastRemoteObject implements ProcessInterfac
                 if (suc) {
                     File file = new File(fpath + "/" + filename);
                     file.createNewFile();
-                    setLocalfile(file);
                 }
             } catch (IOException e) {
 
@@ -79,6 +78,7 @@ public class MutexProcess extends UnicastRemoteObject implements ProcessInterfac
         incrementclock();
         CS_BUSY = true;
         WANTS_TO_ENTER_CS = false;
+
     }
 
     public void releaseLocks() throws RemoteException {
@@ -111,9 +111,7 @@ public class MutexProcess extends UnicastRemoteObject implements ProcessInterfac
         WANTS_TO_ENTER_CS = true;
 
         // multicast read request to start the voting to N/2 + 1 replicas (majority) - optimal. You could as well send to all the replicas that have the file
-        boolean req = multicastMessage(message, quorum);
-
-        return req;
+        return multicastMessage(message, quorum);
     }
 
     // multicast message to N/2 + 1 processes (random processes)
@@ -133,11 +131,14 @@ public class MutexProcess extends UnicastRemoteObject implements ProcessInterfac
                 Message m = null;
                 m = p.onMessageReceived(message);
                 while (m == null) {
+                    Thread.currentThread().wait();
                 }
                 synchronized (queueACK) {
                     queueACK.add(m);
                 }
             } catch (NotBoundException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
@@ -162,8 +163,8 @@ public class MutexProcess extends UnicastRemoteObject implements ProcessInterfac
          *  case 1: Receiver is not accessing shared resource and does not want to: GRANT, acquirelock and reply
          */
         if (!WANTS_TO_ENTER_CS && !CS_BUSY) {
-            acquireLock();
             message.setAcknowledged(true);
+            acquireLock();
             return message;
         }
 
@@ -179,11 +180,11 @@ public class MutexProcess extends UnicastRemoteObject implements ProcessInterfac
          *  case 3: Receiver wants to access resource but is yet to (compare own multicast message to received message
          *  the message with lower timestamp wins) - GRANT if received is lower, acquirelock and reply
          */
-        if (WANTS_TO_ENTER_CS) {
+        if (WANTS_TO_ENTER_CS && !CS_BUSY) {
             int recClock = message.getClock();
             if (recClock < counter) {
-                acquireLock();
                 message.setAcknowledged(true);
+                acquireLock();
                 return message;
             }
         }
@@ -197,7 +198,7 @@ public class MutexProcess extends UnicastRemoteObject implements ProcessInterfac
         // check if it is the majority or not
         // return the decision (true or false)
         long pro = queueACK.stream().filter(a -> a.isAcknowledged()).count();
-        long against = queueACK.size() - pro;
+        long against = queueACK.stream().filter(a -> !a.isAcknowledged()).count();
         return pro > against;
     }
 
@@ -206,11 +207,12 @@ public class MutexProcess extends UnicastRemoteObject implements ProcessInterfac
     public void onReceivedVotersDecision(Message message) throws RemoteException {
 
         // release CS lock if voter initiator says he was denied access bcos he lacks majority votes
-        if (!majorityAcknowledged()) {
+        if (!message.isAcknowledged()) {
             releaseLocks();
         }
 
         // otherwise lock is kept
+
 
     }
 
@@ -222,7 +224,8 @@ public class MutexProcess extends UnicastRemoteObject implements ProcessInterfac
         // Release locks after this operation
         if (message.getOptype() == OperationType.WRITE) {
             Operations op = new Operations(this, message);
-            op.write(getLocalfile());
+            op.performOperation();
+            releaseLocks();
         }
 
 
@@ -234,22 +237,11 @@ public class MutexProcess extends UnicastRemoteObject implements ProcessInterfac
         // check the operation type:
         // if this is a write operation, multicast the update to the rest of the replicas (voters)
         // otherwise if this is a READ operation multicast releaselocks to the replicas (voters)
+       Operations op = new Operations(this,message);
         if (message.getOptype() == OperationType.WRITE) {
-            for (String replica : replicas) {
-                try {
-                    ProcessInterface p = Util.registryHandle(replica);
-                    p.onReceivedUpdateOperation(message);
-                } catch (NotBoundException e) {
-                }
-            }
+            op.multicastOperationToReplicas(message);
         } else {
-            for (String replica : replicas) {
-                try {
-                    ProcessInterface p = Util.registryHandle(replica);
-                    p.releaseLocks();
-                } catch (NotBoundException e) {
-                }
-            }
+            op.multicastReadReleaseLocks();
         }
 
     }
