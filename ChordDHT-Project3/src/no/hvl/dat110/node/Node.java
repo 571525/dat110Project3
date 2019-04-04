@@ -314,7 +314,7 @@ public class Node extends UnicastRemoteObject implements ChordNodeInterface {
 
         Collections.shuffle(replicas);
 
-        for (int i = 0; i < (replicas.size() / 2 + 1); i++) {
+        for (int i = 0; i < replicas.size(); i++) {
             String ip = replicas.get(i).getNodeIP();
             String id = replicas.get(i).getNodeID().toString();
 
@@ -323,7 +323,6 @@ public class Node extends UnicastRemoteObject implements ChordNodeInterface {
                 Message m = node.onMessageReceived(message);
                 while (m == null) {
                 }
-
                 synchronized (queueACK) {
                     queueACK.add(m);
                 }
@@ -341,7 +340,7 @@ public class Node extends UnicastRemoteObject implements ChordNodeInterface {
         incrementclock();
 
         // Hint: for all the 3 cases, use Message to send GRANT or DENY. e.g. message.setAcknowledgement(true) = GRANT
-        Message reply = message;
+        Message reply = new Message();
         reply.setNodeID(this.nodeID);
         reply.setNodeIP(this.nodeIP);
         reply.setClock(this.counter);

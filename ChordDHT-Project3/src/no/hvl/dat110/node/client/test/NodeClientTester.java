@@ -33,6 +33,7 @@ public class NodeClientTester {
 
 		
 		System.out.println("Original Lookup File = "+filename);
+		System.out.println("Hashvalue: " + Hash.hashOf(filename));
 		System.out.println("======================");
 		
 		// try the trackers IP addresses

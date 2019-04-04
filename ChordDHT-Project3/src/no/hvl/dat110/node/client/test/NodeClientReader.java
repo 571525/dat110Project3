@@ -6,6 +6,7 @@ package no.hvl.dat110.node.client.test;
  *
  */
 
+import java.math.BigInteger;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.Registry;
@@ -36,18 +37,21 @@ public class NodeClientReader extends Thread {
 		
 		// Lookup(key) - Use this class as a client that is requesting for a new file and needs the identifier and IP of the node where the file is located
 		// assume you have a list of nodes in the tracker class and select one randomly. We can use the Tracker class for this purpose
+		String[] activeNodes = StaticTracker.ACTIVENODES;
+		String ipStart = activeNodes[0];
 
-		
 		// connect to an active chord node - can use the process defined in StaticTracker 
-		
-		// Compute the hash of the node's IP address
-		
-		// use the hash to retrieve the ChordNodeInterface remote object from the registry
-		
-		// do: FileManager fm = new FileManager(ChordNodeInterface, StaticTracker.N);
-		
-		// do: boolean succeed = fm.requestToReadFileFromAnyActiveNode(filename);
-	
+		BigInteger idHash = Hash.hashOf(ipStart);
+		try {
+			ChordNodeInterface activeNode = (ChordNodeInterface) Util.locateRegistry(ipStart).lookup(idHash.toString());
+			FileManager fm = new FileManager(activeNode, StaticTracker.N);
+			this.succeed = fm.requestToReadFileFromAnyActiveNode(filename);
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		} catch (NotBoundException e) {
+			e.printStackTrace();
+		}
+
 	}
 	
 	public boolean isSucceed() {
