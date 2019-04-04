@@ -92,7 +92,7 @@ public class Hash {
 		for (int i=0; i<ips.length; i++) {
 			//System.out.println(ips[i]+" | "+Hash.customHash(ips[i]));
 		}
-		
+		System.out.println(addressSize());
 		//System.out.println(Hash.customHash("158.37.70.149"));
 	}
 
