@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ebd967a1-33e4-46b3-95cd-bf86294e8899" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/file/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/file/FileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/NodeClientReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/NodeClientReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/NodeClientTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/NodeClientTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/NodeClientWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/NodeClientWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/Process6.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/Process6.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/util/Hash.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/util/Hash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/rpc/StaticTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/rpc/StaticTracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MutexQuorumAlgorithm-Project3/src/no/hvl/dat110/mutexprocess/MutexProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/MutexQuorumAlgorithm-Project3/src/no/hvl/dat110/mutexprocess/MutexProcess.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,12 +15,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/ChordRingReadTestPass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+            <state relative-caret-position="170">
+              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -38,6 +35,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MutexQuorumAlgorithm-Project3/src/no/hvl/dat110/mutexprocess/MutexProcess.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="134" column="20" selection-start-line="134" selection-start-column="20" selection-end-line="134" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#10001#10002#0" expanded="true" />
+                <element signature="e#10091#10092#0" expanded="true" />
+                <element signature="e#10268#10269#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/ChordRingWriteTestFail.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -47,64 +59,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/Writer.java">
+        <entry file="file://$PROJECT_DIR$/MutexQuorumAlgorithm-Project3/src/no/hvl/dat110/clients/test/TestConcurrentWriteWriteConsistencyPass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="685">
-              <caret line="156" selection-start-line="156" selection-end-line="156" />
+            <state relative-caret-position="-287">
+              <caret line="66" column="70" selection-start-line="66" selection-start-column="70" selection-end-line="66" selection-end-column="70" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/Operations.java">
+        <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="324">
+              <caret line="369" column="23" selection-start-line="369" selection-start-column="23" selection-end-line="369" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/file/FileManager.java">
+        <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/NodeClientTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="197" column="54" selection-start-line="197" selection-start-column="54" selection-end-line="197" selection-end-column="54" />
+            <state relative-caret-position="123">
+              <caret line="28" column="44" lean-forward="true" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/rpc/ChordNodeContainer.java">
+        <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/NodeClientReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-176">
-              <caret line="103" column="8" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
+            <state relative-caret-position="166">
+              <caret line="42" column="70" selection-start-line="42" selection-start-column="70" selection-end-line="42" selection-end-column="70" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/Process6.java">
+        <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/util/Util.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            <state relative-caret-position="450">
+              <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/NodeClientTester.java">
+        <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/rpc/StaticTracker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/NodeClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-289">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="221">
+              <caret line="13" column="40" lean-forward="true" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -118,16 +121,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/MutexQuorumAlgorithm-Project3/src/no/hvl/dat110/interfaces/ProcessInterface.java" />
-        <option value="$PROJECT_DIR$/MutexQuorumAlgorithm-Project3/src/no/hvl/dat110/mutexprocess/MutexProcess.java" />
         <option value="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/Operations.java" />
-        <option value="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/rpc/StaticTracker.java" />
-        <option value="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/Node.java" />
         <option value="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/NodeClientTester.java" />
         <option value="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/util/Hash.java" />
         <option value="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/NodeClientWriter.java" />
-        <option value="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/NodeClientReader.java" />
         <option value="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/file/FileManager.java" />
         <option value="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/Process6.java" />
+        <option value="$PROJECT_DIR$/MutexQuorumAlgorithm-Project3/src/no/hvl/dat110/mutexprocess/MutexProcess.java" />
+        <option value="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/Node.java" />
+        <option value="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/NodeClientReader.java" />
+        <option value="$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/rpc/StaticTracker.java" />
       </list>
     </option>
   </component>
@@ -143,7 +146,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,22 +170,6 @@
               <item name="ChordDHT-Project3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="dat110" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dat110Project3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dat110Project3" type="462c0819:PsiDirectoryNode" />
-              <item name="ChordDHT-Project3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dat110" type="462c0819:PsiDirectoryNode" />
-              <item name="chordoperations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dat110Project3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dat110Project3" type="462c0819:PsiDirectoryNode" />
-              <item name="ChordDHT-Project3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dat110" type="462c0819:PsiDirectoryNode" />
-              <item name="file" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dat110Project3" type="b2602c69:ProjectViewProjectNode" />
@@ -228,21 +214,11 @@
               <item name="dat110" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="dat110Project3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dat110Project3" type="462c0819:PsiDirectoryNode" />
-              <item name="MutexQuorumAlgorithm-Project3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dat110Project3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dat110Project3" type="462c0819:PsiDirectoryNode" />
-              <item name="MutexQuorumAlgorithm-Project3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -252,7 +228,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554406432166" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554979747745" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -272,33 +248,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.NodeClientTester">
-    <configuration name="ChordNodeContainer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="no.hvl.dat110.rpc.ChordNodeContainer" />
-      <module name="dat110Project3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="no.hvl.dat110.rpc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NodeClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="no.hvl.dat110.node.client.NodeClient" />
-      <module name="dat110Project3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="no.hvl.dat110.node.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ChordRingConcurrentReadWriteTestFail">
     <configuration name="NodeClientTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="no.hvl.dat110.node.client.test.NodeClientTester" />
       <module name="dat110Project3" />
@@ -325,8 +275,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Process9" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="no.hvl.dat110.node.client.test.Process9" />
+    <configuration name="ChordRingConcurrentReadWriteTestFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dat110Project3" />
       <extension name="coverage">
         <pattern>
@@ -334,17 +283,50 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="no.hvl.dat110.node.client.test" />
+      <option name="MAIN_CLASS_NAME" value="no.hvl.dat110.node.client.test.ChordRingConcurrentReadWriteTestFail" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChordRingReadTestPass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dat110Project3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="no.hvl.dat110.node.client.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="no.hvl.dat110.node.client.test" />
+      <option name="MAIN_CLASS_NAME" value="no.hvl.dat110.node.client.test.ChordRingReadTestPass" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChordRingWriteTestFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dat110Project3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="no.hvl.dat110.node.client.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="no.hvl.dat110.node.client.test" />
+      <option name="MAIN_CLASS_NAME" value="no.hvl.dat110.node.client.test.ChordRingWriteTestFail" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ChordRingConcurrentReadWriteTestFail" />
+        <item itemvalue="JUnit.ChordRingReadTestPass" />
+        <item itemvalue="JUnit.ChordRingWriteTestFail" />
         <item itemvalue="Application.NodeClientTester" />
-        <item itemvalue="Application.ChordNodeContainer" />
-        <item itemvalue="Application.NodeClient" />
         <item itemvalue="Application.Process10" />
-        <item itemvalue="Application.Process9" />
       </list>
     </recent_temporary>
   </component>
@@ -358,7 +340,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554215641136</updated>
-      <workItem from="1554215642362" duration="48871000" />
+      <workItem from="1554215642362" duration="48992000" />
+      <workItem from="1554724176667" duration="902000" />
+      <workItem from="1554729627329" duration="608000" />
+      <workItem from="1554735583363" duration="50000" />
+      <workItem from="1554977790211" duration="1813000" />
     </task>
     <task id="LOCAL-00001" summary="så langt så godt">
       <created>1554293969883</created>
@@ -388,78 +374,85 @@
       <option name="project" value="LOCAL" />
       <updated>1554388162810</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="All done">
+      <created>1554406476028</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1554406476028</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ChordRingReadTestPass - 2019.04.04 at 21h 22m 23s.xml">
-      <configuration name="ChordRingReadTestPass" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ChordRingReadTestPass - 2019.04.04 at 21h 22m 27s.xml">
-      <configuration name="ChordRingReadTestPass" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ChordRingReadTestPass - 2019.04.04 at 21h 22m 31s.xml">
-      <configuration name="ChordRingReadTestPass" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ChordRingReadTestPass - 2019.04.04 at 21h 22m 36s.xml">
-      <configuration name="ChordRingReadTestPass" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ChordRingWriteTestFail - 2019.04.04 at 21h 22m 46s.xml">
+    <history-entry file="ChordRingWriteTestFail - 2019.04.11 at 12h 34m 31s.xml">
       <configuration name="ChordRingWriteTestFail" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChordRingWriteTestFail - 2019.04.04 at 21h 28m 20s.xml">
-      <configuration name="ChordRingWriteTestFail" configurationId="JUnit" />
+    <history-entry file="ChordRingReadTestPass - 2019.04.11 at 12h 34m 38s.xml">
+      <configuration name="ChordRingReadTestPass" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChordRingWriteTestFail - 2019.04.04 at 21h 28m 31s.xml">
-      <configuration name="ChordRingWriteTestFail" configurationId="JUnit" />
+    <history-entry file="ChordRingReadTestPass - 2019.04.11 at 12h 35m 45s.xml">
+      <configuration name="ChordRingReadTestPass" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChordRingConcurrentReadWriteTestFail - 2019.04.04 at 21h 28m 42s.xml">
+    <history-entry file="ChordRingReadTestPass - 2019.04.11 at 12h 35m 51s.xml">
+      <configuration name="ChordRingReadTestPass" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ChordRingConcurrentReadWriteTestFail - 2019.04.11 at 12h 36m 10s.xml">
       <configuration name="ChordRingConcurrentReadWriteTestFail" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChordRingReadTestPass - 2019.04.04 at 21h 28m 54s.xml">
+    <history-entry file="ChordRingReadTestPass - 2019.04.11 at 12h 36m 20s.xml">
       <configuration name="ChordRingReadTestPass" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChordRingWriteTestFail - 2019.04.04 at 21h 29m 01s.xml">
+    <history-entry file="ChordRingWriteTestFail - 2019.04.11 at 12h 36m 27s.xml">
+      <configuration name="ChordRingWriteTestFail" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ChordRingConcurrentReadWriteTestFail - 2019.04.11 at 12h 40m 53s.xml">
+      <configuration name="ChordRingConcurrentReadWriteTestFail" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ChordRingReadTestPass - 2019.04.11 at 12h 41m 00s.xml">
+      <configuration name="ChordRingReadTestPass" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ChordRingWriteTestFail - 2019.04.11 at 12h 41m 07s.xml">
       <configuration name="ChordRingWriteTestFail" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48871000" />
+    <option name="totallyTimeSpent" value="52365000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24939272" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26639676" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32931036" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.077586204" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31206897" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.12241379" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.49310344" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="PlantUML" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32931036" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="PlantUML" order="4" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +463,8 @@
     <MESSAGE value="task 1 done" />
     <MESSAGE value="not all done" />
     <MESSAGE value="task 2 -done" />
-    <option name="LAST_COMMIT_MESSAGE" value="task 2 -done" />
+    <MESSAGE value="All done" />
+    <option name="LAST_COMMIT_MESSAGE" value="All done" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/MutexQuorumAlgorithm-Project3/src/no/hvl/dat110/mutexprocess/Config.java">
@@ -567,54 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MutexQuorumAlgorithm-Project3/src/no/hvl/dat110/mutexprocess/MutexProcess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="179" column="38" selection-start-line="179" selection-start-column="38" selection-end-line="179" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#10013#10014#0" expanded="true" />
-            <element signature="e#10103#10104#0" expanded="true" />
-            <element signature="e#10280#10281#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MutexQuorumAlgorithm-Project3/src/no/hvl/dat110/clients/test/TestWriteReadConsistencyPass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MutexQuorumAlgorithm-Project3/src/no/hvl/dat110/clients/test/TestQuorumDistributedAlgorithmPass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MutexQuorumAlgorithm-Project3/src/no/hvl/dat110/clients/test/TestQuorumDistributedAlgorithmFail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MutexQuorumAlgorithm-Project3/src/no/hvl/dat110/clients/test/TestConcurrentWriteWriteConsistencyPass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="66" column="70" selection-start-line="66" selection-start-column="70" selection-end-line="66" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MutexQuorumAlgorithm-Project3/src/no/hvl/dat110/clients/test/TestConcurrentReadWriteConsistencyPass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="66" column="70" selection-start-line="66" selection-start-column="70" selection-end-line="66" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/Process1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -626,20 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/rpc/StaticTracker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/util/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -664,13 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4522">
-          <caret line="342" column="38" selection-start-line="342" selection-start-column="38" selection-end-line="342" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/NodeClientWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -678,31 +603,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/NodeClientReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/Writer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
+        <state relative-caret-position="2227">
           <caret line="156" selection-start-line="156" selection-end-line="156" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/Operations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
+        <state relative-caret-position="612">
           <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/rpc/ChordNodeContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="103" column="8" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/Process6.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/NodeClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/file/FileManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="197" column="54" selection-start-line="197" selection-start-column="54" selection-end-line="197" selection-end-column="54" />
+        <state relative-caret-position="3762">
+          <caret line="260" column="31" selection-start-line="260" selection-start-column="31" selection-end-line="260" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MutexQuorumAlgorithm-Project3/src/no/hvl/dat110/clients/test/TestWriteReadConsistencyPass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MutexQuorumAlgorithm-Project3/src/no/hvl/dat110/clients/test/TestConcurrentReadWriteConsistencyPass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="66" column="70" selection-start-line="66" selection-start-column="70" selection-end-line="66" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MutexQuorumAlgorithm-Project3/src/no/hvl/dat110/clients/test/TestQuorumDistributedAlgorithmFail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MutexQuorumAlgorithm-Project3/src/no/hvl/dat110/clients/test/TestQuorumDistributedAlgorithmPass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MutexQuorumAlgorithm-Project3/src/no/hvl/dat110/mutexprocess/MutexProcess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="134" column="20" selection-start-line="134" selection-start-column="20" selection-end-line="134" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10001#10002#0" expanded="true" />
+            <element signature="e#10091#10092#0" expanded="true" />
+            <element signature="e#10268#10269#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MutexQuorumAlgorithm-Project3/src/no/hvl/dat110/clients/test/TestConcurrentWriteWriteConsistencyPass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-287">
+          <caret line="66" column="70" selection-start-line="66" selection-start-column="70" selection-end-line="66" selection-end-column="70" />
         </state>
       </provider>
     </entry>
@@ -715,8 +702,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/ChordRingReadTestPass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        <state relative-caret-position="170">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -727,31 +714,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/NodeClient.java">
+    <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/Process6.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/rpc/ChordNodeContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-176">
-          <caret line="103" column="8" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
+        <state relative-caret-position="324">
+          <caret line="369" column="23" selection-start-line="369" selection-start-column="23" selection-end-line="369" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/NodeClientTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="123">
+          <caret line="28" column="44" lean-forward="true" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/node/client/test/NodeClientReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="42" column="70" selection-start-line="42" selection-start-column="70" selection-end-line="42" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/util/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChordDHT-Project3/src/no/hvl/dat110/rpc/StaticTracker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="40" lean-forward="true" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
         </state>
       </provider>
     </entry>

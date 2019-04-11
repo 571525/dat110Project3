@@ -84,7 +84,6 @@ public class MutexProcess extends UnicastRemoteObject implements ProcessInterfac
         // release your lock variables and logical clock update
         CS_BUSY = false;
         WANTS_TO_ENTER_CS = false;
-        incrementclock();
     }
 
     public boolean requestWriteOperation(Message message) throws RemoteException {
@@ -126,19 +125,17 @@ public class MutexProcess extends UnicastRemoteObject implements ProcessInterfac
         Collections.shuffle(replicas);
 
         // multicast message to N/2 + 1 processes (random processes) - block until feedback is received
-        for (int i = 0; i < n; i++) {
-            String rep = replicas.get(i);
-            try {
-                ProcessInterface p = Util.registryHandle(rep);
-
-                // do something with the acknowledgement you received from the voters - Idea: use the queueACK to collect GRANT/DENY messages and make sure queueACK is synchronized!!!
-                synchronized (queueACK) {
+        synchronized (queueACK) {
+            for (int i = 0; i < n; i++) {
+                String rep = replicas.get(i);
+                try {
+                    ProcessInterface p = Util.registryHandle(rep);
+                    // do something with the acknowledgement you received from the voters - Idea: use the queueACK to collect GRANT/DENY messages and make sure queueACK is synchronized!!!
                     Message m = p.onMessageReceived(message);
                     queueACK.add(m);
+
+                } catch (Exception e) {
                 }
-
-            } catch (Exception e) {
-
             }
         }
 

@@ -314,20 +314,18 @@ public class Node extends UnicastRemoteObject implements ChordNodeInterface {
 
         Collections.shuffle(replicas);
 
-        for (int i = 0; i < replicas.size(); i++) {
-            String ip = replicas.get(i).getNodeIP();
-            String id = replicas.get(i).getNodeID().toString();
-
-            try {
-                ChordNodeInterface node = (ChordNodeInterface) Util.locateRegistry(ip).lookup(id);
-                Message m = node.onMessageReceived(message);
-                while (m == null) {
-                }
-                synchronized (queueACK) {
+        synchronized (queueACK) {
+            for (int i = 0; i < replicas.size(); i++) {
+                String ip = replicas.get(i).getNodeIP();
+                String id = replicas.get(i).getNodeID().toString();
+                try {
+                    ChordNodeInterface node = (ChordNodeInterface) Util.locateRegistry(ip).lookup(id);
+                    Message m = node.onMessageReceived(message);
+                    //  while (m == null) { }
                     queueACK.add(m);
+                } catch (NotBoundException e) {
+                    e.printStackTrace();
                 }
-            } catch (NotBoundException e) {
-                e.printStackTrace();
             }
         }
         return majorityAcknowledged();
@@ -340,38 +338,36 @@ public class Node extends UnicastRemoteObject implements ChordNodeInterface {
         incrementclock();
 
         // Hint: for all the 3 cases, use Message to send GRANT or DENY. e.g. message.setAcknowledgement(true) = GRANT
-        Message reply = new Message();
-        reply.setNodeID(this.nodeID);
-        reply.setNodeIP(this.nodeIP);
-        reply.setClock(this.counter);
 
         /**
          *  case 1: Receiver is not accessing shared resource and does not want to: GRANT, acquirelock and reply
          */
         if (!WANTS_TO_ENTER_CS && !CS_BUSY) {
-            reply.setAcknowledged(true);
+            message.setAcknowledged(true);
             acquireLock();
-            return reply;
+            return message;
         }
 
         /**
          *  case 2: Receiver already has access to the resource: DENY and reply
          */
         if(CS_BUSY) {
-            reply.setAcknowledged(false);
-            return reply;
+            message.setAcknowledged(false);
+            return message;
         }
 
         /**
          *  case 3: Receiver wants to access resource but is yet to (compare own multicast message to received message
          *  the message with lower timestamp wins) - GRANT if received is lower, acquirelock and reply
          */
-        boolean ack = message.getClock() < reply.getClock();
-        if (ack) {
-            acquireLock();
-            reply.setAcknowledged(true);
-        }
-        return reply;
+       if(WANTS_TO_ENTER_CS) {
+           boolean ack = message.getClock() < counter;
+           if (ack) {
+               acquireLock();
+               message.setAcknowledged(true);
+           }
+       }
+        return message;
     }
 
     @Override
